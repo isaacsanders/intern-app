@@ -1,0 +1,35 @@
+digraph features {
+  "Students"                        [ shape=box style=filled color="deepskyblue" ]
+  "Enter resume"                    [ style=filled fillcolor="deepskyblue" ]
+  "Download resume as a PDF"        [ style=filled fillcolor="deepskyblue" ]
+  "View feedback"                   [ style=filled fillcolor="deepskyblue" ]
+  "View stats on calculated growth" [ style=filled fillcolor="deepskyblue" ]
+  "Communicate with a company"      [ style=filled fillcolor="deepskyblue" ]
+  "Accept an offer with a company"  [ style=filled fillcolor="deepskyblue" ]
+
+  "Download resume as a PDF" -> "Enter resume"
+  "View feedback" -> "Give feedback as a professional"
+  "View stats on calculated growth" -> "Respond to changes in a resume"
+  "Communicate with a company" -> "Communicate with student"
+  "Accept an offer with a company" -> "Make an offer to a student"
+
+  "Professionals"                   [ shape=box style=filled color="crimson" ]
+  "Rate resumes"                    [ style=filled fillcolor="crimson" ]
+  "Give feedback as a professional" [ style=filled fillcolor="crimson" ]
+  "Respond to changes in a resume"  [ style=filled fillcolor="crimson" ]
+
+  "Rate resumes" -> "Enter resume"
+  "Give feedback as a professional" -> "Enter resume"
+  "Respond to changes in a resume" -> "View feedback"
+
+  "Companies"                                        [ shape=box style=filled color="gold" ]
+  "Receive a crop of resumes of varying \"quality\"" [ style=filled fillcolor="gold" ]
+  "Give feedback as a company"                       [ style=filled fillcolor="gold" ]
+  "Communicate with student"                         [ style=filled fillcolor="gold" ]
+  "Make an offer to a student"                       [ style=filled fillcolor="gold" ]
+
+  "Receive a crop of resumes of varying \"quality\"" -> "Respond to changes in a resume"
+  "Give feedback as a company" -> "Receive a crop of resumes of varying \"quality\""
+  "Communicate with student" -> "Receive a crop of resumes of varying \"quality\""
+  "Make an offer to a student" -> "Receive a crop of resumes of varying \"quality\""
+}
